@@ -40,4 +40,6 @@ let orm = {
             cb(res);
         })
     }
-}
+};
+
+module.exports = orm;
