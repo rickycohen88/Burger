@@ -3,7 +3,7 @@ let connection = require('../config/connection');
 
 let orm = {
     all: function(cb){
-        let queryString = "SELECT * FROM" + "burgers" + ";";
+        let queryString = "SELECT * FROM " + "burgers" + ";";
         connection.query(queryString,function(err,result){
             if(err){
                 throw err;

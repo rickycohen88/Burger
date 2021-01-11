@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col" align="center">
-      <h1 class="header">BIGS BURGERS!</h1>
+      <h1 class="header">Burger App</h1>
 
     </div>
   </div>
   <div class="row">
     <div class="col text-center">
-      <h2>Ready to Eat!!</h2>
+      <h2>Ordered</h2>
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
@@ -21,12 +21,14 @@
 
     </div>
     <div class="col text-center">
-      <h2>In your tum-tums</h2>
+      <h2>Eaten</h2>
 
       <ul>
         {{#each burgers}}
         {{#if devoured}}
-        <li>{{this.burger_name}}</li>
+        <li>{{this.burger_name}}
+          <button data-id="{{this.id}}" class="delete-eaten-button">Delete</button>
+        </li>
         {{/if}}
         {{/each}}
       </ul>
@@ -40,7 +42,7 @@
       <form class="create-form">
 
         <div class="form-group">
-          <label for="newBurger">Burger Name:</label>
+          <label for="newBurger">Your Order:</label>
           <input type="text" id="newBurger" name="name">
         </div>
         <button class="add-burger-button button" type="submit">Add Burger</button>

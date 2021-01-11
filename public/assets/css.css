@@ -7,11 +7,11 @@ li {
 }
 
 .main_body {
-    background-color:#7dc2ff;
+    background-color:darkolivegreen;
 }
 
 .header {
-    font-family: 'Yusei Magic', sans-serif;
+    font-family:'Lobster',cursive;
 }
 
 .button {
@@ -22,5 +22,5 @@ li {
     text-align: center;
     display: inline-block;
     text-decoration: none;
-    background-color: #30a0fc;
+    background-color: #99afa7;
 }

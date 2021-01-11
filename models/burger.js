@@ -2,7 +2,7 @@ let orm = require("../config/orm");
 
 let burger = {
     all:function(cb){
-        orm.all("",function(res){
+        orm.all(function(res){
             cb(res);
         })
     },
@@ -13,6 +13,11 @@ let burger = {
     },
     update:function(id,cb){
         orm.update(id,function(res){
+            cb(res);
+        })
+    },
+    delete:function(id,cb){
+        orm.delete(id,function(res){
             cb(res);
         })
     }

@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $(".devour-button").on("click", function(event) {
-        event.preventDefault();
+        
 
         let id = $(this).data("id");
 
@@ -16,9 +16,9 @@ $(document).ready(function(){
 
         // console.log("post button clicked");
         let newBurger = {
-            burger_name: $("#newBurger").val().trim()
+            name: $("#newBurger").val().trim()
         }
-        if(newBurger.burger_name===""){
+        if(newBurger.name ===""){
             alert("Cannot leave field empty");
         } else {
             $.ajax("/api/burgers", {
@@ -29,5 +29,16 @@ $(document).ready(function(){
                 location.reload();
             });
         }
+    });
+
+    $(".delete-eaten-button").on("click",function(event){
+       
+        let id = $(this).data("id");
+
+        $.ajax("/api/burgers/" + id,{
+            type:"DELETE"
+        }).then(function(){
+            location.reload();
+        })
     });
 })
